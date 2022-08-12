@@ -1,0 +1,130 @@
+<div class = "appt-main">
+    <div class="no-appt">
+        <img src = "../../Images/empty.svg" alt="add new appointment">
+        <br>
+        <p style="color:grey">No appointment Pending.</p>
+    </div>
+    <div class="yes-appt">
+        <p id="pg-title">Appointments</p>
+        <p id="history">History</p>
+        <table class="table table-borderless table-striped">
+            <thead>
+              <tr>
+                <th scope="col">S/N</th>
+                <th scope="col">Patient</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+                <th scope="col">Venue</th>
+                <th scope="col">Description</th>
+                <th scope="col">Status</th>
+                <th scope="col">EMR</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody class="appt-tbody">
+            </tbody>
+          </table>
+    </div>
+    <div class="modal fade" id="emr-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-xl  modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header ">
+            <h5 class="modal-title" id="exampleModalToggleLabel">Medical Record</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="c-emr-body" >
+            <div id="top-left">
+              <h4>Vitals</h4>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Height(cm)              |  <span class="mr-height"></span></li>
+                <li class="list-group-item">Weight(cm)              |  <span class="mr-weight"></span></li>
+                <li class="list-group-item">BMI                     |  <span class="mr-bmi"></span></li>
+                <li class="list-group-item">Temperature(C)          |  <span class="mr-temp"></span></li>
+                <li class="list-group-item">Blood Pressure          |  <span class="mr-bp"></span></li>
+                <li class="list-group-item">Pulse                   |  <span class="mr-pulse"></span></li>
+                <li class="list-group-item">Respiratory Rate        |  <span class="mr-resp-rate"></span></li>
+                <li class="list-group-item">Blood Oxygen Saturation | <span class="mr-bos"></span></li>         
+              </ul>      
+              </div> 
+              <div id="top-right">
+                <h4>Allergies</h4>
+                <ul class="list-group list-group-flush" id="l-g-a">
+                  <li class="list-group-item">No allergies recorded</li>
+                </ul>      
+                </div> 
+                <div id="bottom-left">
+                  <h4>Diagnoses</h4>
+                  <ul class="list-group list-group-flush" id="l-g-d">
+                    <li class="list-group-item">No diagnosis recorded yet</li>
+                  </ul>      
+                  </div> 
+            <div id="bottom-right">
+            <h4>Visits</h4>
+            <ul class="list-group list-group-flush" id="l-g-v">
+              <li class="list-group-item">No visits yet</li>
+            </ul>      
+            </div>  
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-btn">Close</button>   
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="c-appt-modal" aria-hidden="true" aria-labelledby="c-appt-modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalToggleLabel">Request Approval</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body" >
+              <input placeholder="Patient" type="textfield" maxlength="20" name="patient-field" id="patient-field" class="txtfield" disabled="True">
+              <input placeholder="Date" type="textfield" maxlength="20" name="date-field" id="datepicker" class="txtfield">
+              <input placeholder="Time e.g 12:00 - 14:00" type="textfield" maxlength="20" name="time-field" id="time-field" class="txtfield">
+              <input placeholder="Venue" type="textfield" maxlength="20" name="venue-field" id="venue-field" class="txtfield">
+              <input placeholder="Description" type="textfield" maxlength="20" name="desc-field" id="description-field" class="txtfield" disabled="True">
+          </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="ok-btn">Ok</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-btn">Close</button>
+              <button type="button" class="btn btn-primary" id="approve-btn">Approve</button>     
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="confirmation-modal" aria-hidden="true" aria-labelledby="confirmation-modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalToggleLabel">Diagnosis</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body" >
+              <textarea rows=3 cols = 30 id="diagnosis" required></textarea>
+              <label>Make a prescription</label>
+              <br>
+              <label for="yes-chk">Yes</label>
+              <input id="yes-chk" type="checkbox" required>
+              <label for="no-chk">No</label>
+              <input id ="no-chk" type="checkbox" required>
+              <div id="rx">
+                <select class="form-select d-combo appt-btn" id="drug-name" aria-placeholder="drug-name" required>
+                  <option selected>--Select Drug--</option>
+                  <option value="Ampiclox">Ampiclox</option>
+                  <option value="Ibuprofen">Ibuprofen</option>
+                  <option value="Lonart">Lonart</option>
+                  <option value="Panadol">Panadol</option>
+                  <option value="Paracetamol">Paracetamol</option>
+                </select>              
+                <input type="text" placeholder = "Serving" id="drug-serving" class="txtfield" required>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="submit-btn">Submit</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancel-btn">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

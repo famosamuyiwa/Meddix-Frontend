@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Medik</title>
+        <link rel="stylesheet" href="../scss/stylesheet.scss">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Mate+SC&display=swap" rel="stylesheet"> 
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807"></script>
+
+    </head>
+<body>
+        <div class="wrapper">
+            <div class="main">
+                <div class="navbar">
+                    <div class="container">
+                        <a href="#" id="logo"><span>Med</span>ik</a>
+
+                        <nav>
+                            <p>Need Help? | Contact Us at +234 816 784 5287, +234 909 969 5319</p>
+                        </nav>
+                        
+                    </div> 
+                </div>
+
+                <section class="hero">
+                    <div class="container">
+                        <div class="left-col" id = "grid">
+                            <img id="nurse" src="../Images/nurse_figure.svg" alt="nurse figure">
+                        </div>
+
+                        <div class="mid-col">
+                            <h1>TAKING <span>e</span>Rx TO THE NEXT LEVEL</h1>
+                        </div>
+
+                        <div class="right-col">
+                            <div id=login_container>
+                                <h3>Login</h3>
+                                <p id="det_prmpt">Enter your details below to continue</p>
+                                <p id="error-msg"></p>
+                                <label id="img_category_label"class="field"for="img_category"data-value="">
+                                    <span>User Type*</span>
+                                    <img src="../icons/dropdown.svg" id="dropdown" alt="dropdown">
+                                    <div id="img_category"class="psuedo_select"name="img_category">
+                                        <span class="selected" id="login-category"></span>
+                                        <ul id="img_category_options"class="options">
+                                            <li class="option"data-value="opt_1">Patient</li>
+                                            <li class="option"data-value="opt_2">Consultant</li>
+                                            <li class="option"data-value="opt_3">Dispenser</li>
+
+                                        </ul>
+                                    </div>
+                                </label>                                
+                                <div class="form-field">
+                                    <form method="post" id="login_form" enctype="application/json">
+                                        <div>
+                                            <div class="txt_field">
+                                                <input type="text"  name="username" id="username" required>
+                                                <span></span>
+                                                <label>User ID</label>    
+                                            </div>
+                                            <div class="txt_field">
+                                                <input type="password" name="password" id="password" required>
+                                                <span></span>
+                                                <label>Password</label>
+                                            </div>
+                                            <input type="submit" class="login_btn" value="LOGIN" >
+                                        </div>
+                                    </form>
+                                        <br>
+                                        <span class="psw">Forgot <a href="#">password?</a></span>
+                                        </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+     
+        <footer>
+            <div class="container">
+                <p>Final Year Project of Famosa Oluwamuyiwa 18/0623 &amp Omodon Orisetemi 18/0385<br>Medik web v1.0.0</p>
+         
+            </div>
+        </footer>
+
+        <script src="./index.js"></script>
+
+</body>
+</html>

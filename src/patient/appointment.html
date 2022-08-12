@@ -1,0 +1,121 @@
+<div class = "appt-main">
+    <div class="no-appt">
+        <img id= "add-appt-icon2" src = "../../Images/add.svg" alt="add new appointment">
+        <br>
+        <p style="color:grey">No appointment yet. Click on the icon to book a new one!</p>
+    </div>
+    <div class="yes-appt">
+        <p id="pg-title">Appointments</p>
+        <p id="history">History</p>
+        <table class="table table-borderless table-striped">
+            <thead>
+              <tr>
+                <th scope="col">S/N</th>
+                <th scope="col">Consultant</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+                <th scope="col">Venue</th>
+                <th scope="col">Description</th>
+                <th scope="col">Status</th>
+                <th scope="col">Reschedule</th>
+              </tr>
+            </thead>
+            <tbody class="appt-tbody">
+            </tbody>
+          </table>
+          <img src="../../icons/add-appt.svg" id="add-appt-icon">
+  <div class="modal fade" id="appt-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel">Appointment Request</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-body" >
+          <p>Not sure who to see? Try out our symptom checker.</p>
+          <button type="button" class="btn btn-primary" id="symp-chk" data-bs-target="#appt-modal2" data-bs-toggle="modal">Symptom Checker</button>
+          <p id="sugg-p">Symptom Checker suggests a <span id="sugg"></span></p>
+          <select class="form-select d-combo appt-btn" id="specialist" aria-placeholder="Specialist">
+            <option selected>--Select Specialist--</option>
+            <option value="Dermatologist">Dermatologist</option>
+            <option value="Optician">Optician</option>
+            <option value="Pediatrician">Pediatrician</option>
+            <option value="Podiatrist">Podiatrist</option>
+            <option value="Endocrinologist">Endocrinologist</option>
+            <option value="Neurologist">Neurologist</option>
+            <option value="Rheumatologist">Rheumatologist</option>
+            <option value="Allergist">Allergist</option>
+            <option value="Psychiatrist">Psychiatrist</option>
+            <option value="Nephrologist">Nephrologist</option>
+            <option value="Gynaecologist">Gynaecologist</option>
+            <option value="Pulmonologist">Pulmonologist</option>
+            <option value="Ophthalmologist">Ophthalmologist</option>
+            <option value="Oncologist">Oncologist</option>
+            <option value="Urologist">Urologist</option>
+            <option value="Otolaryngologist">Otolaryngologist</option>
+            <option value="Gastroenterologist">Gastroenterologist</option>
+            <option value="Cardiologist">Cardiologist</option>
+            <option value="Orthopedist">Orthopedist</option>
+            <option value="Primary Care Physician">Primary Care Physician</option>
+          </select>
+          <select class="form-select c-combo appt-btn" id="consultant" aria-placeholder="Consultant" disabled="false">
+            <option selected>--Select Consultant--</option>
+          </select>       
+          <input placeholder="Description" type="textfield" maxlength="20" name="desc-field" id="desc-field" class="txtfield">
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="ok-btn">Ok</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-btn">Close</button>
+          <button type="button" class="btn btn-primary" id="submit-btn">Submit Request</button>     
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="appt-modal2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-warning">
+          <h5 class="modal-title" id="appt-modal2">Symptom Checker</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Available Symptoms:</p>
+          <p id="symptoms">itching,	skin_rash,	nodal_skin_eruptions,	continuous_sneezing,	shivering	chills,	joint_pain,	stomach_pain, acidity,	ulcers_on_tongue,	muscle_wasting,	vomiting,	burning_micturition,	spotting_ urination,	fatigue,	weight_gain,	anxiety,	cold_hands_and_feets,	mood_swings,	weight_loss,	restlessness,	lethargy,	patches_in_throat,	irregular_sugar_level,	cough,	high_fever,	sunken_eyes,	breathlessness,	sweating,	dehydration,	indigestion,	headache,	yellowish_skin,	dark_urine,	nausea,	loss_of_appetite,	pain_behind_the_eyes,	back_pain,	constipation,	abdominal_pain,	diarrhoea,	mild_fever,	yellow_urine,	yellowing_of_eyes,	acute_liver_failure,	fluid_overload,	swelling_of_stomach,	swelled_lymph_nodes,	malaise,	blurred_and_distorted_vision,	phlegm,	throat_irritation,	redness_of_eyes,	sinus_pressure,	runny_nose,	congestion,	chest_pain,	weakness_in_limbs,	fast_heart_rate,	pain_during_bowel_movements,	pain_in_anal_region,	bloody_stool,	irritation_in_anus,	neck_pain,	dizziness,	cramps,	bruising,	obesity,	swollen_legs,	swollen_blood_vessels,	puffy_face_and_eyes,	enlarged_thyroid,	brittle_nails,	swollen_extremeties,	excessive_hunger,	extra_marital_contacts,	drying_and_tingling_lips,	slurred_speech,	knee_pain,	hip_joint_pain,	muscle_weakness,	stiff_neck,	swelling_joints,	movement_stiffness,	spinning_movements,	loss_of_balance,	unsteadiness,	weakness_of_one_body_side,	loss_of_smell,	bladder_discomfort,	foul_smell_of urine,	continuous_feel_of_urine,	passage_of_gases,	internal_itching,	toxic_look_(typhos),	depression,	irritability,	muscle_pain,	altered_sensorium,	red_spots_over_body,	belly_pain,	abnormal_menstruation,	dischromic _patches,	watering_from_eyes,	increased_appetite,	polyuria,	family_history,	mucoid_sputum,	rusty_sputum,	lack_of_concentration,	visual_disturbances,	receiving_blood_transfusion,	receiving_unsterile_injections,	coma,	stomach_bleeding,	distention_of_abdomen,	history_of_alcohol_consumption,	fluid_overload,	blood_in_sputum,	prominent_veins_on_calf,	palpitations,	painful_walking,	pus_filled_pimples,	blackheads,	scurring,	skin_peeling,	silver_like_dusting,	small_dents_in_nails,	inflammatory_nails,	blister,	red_sore_around_nose,	yellow_crust_ooze, prognosis</p>
+          <p>Supply all symptoms that apply exactly as seen in a comma-separated format from the list of available symptoms</p>
+          <input type="text" placeholder = "Symptoms e.g itching, skin_rash" id="symptom" class="txtfield" required>
+          <div id="prog-box">
+            You most likely have : <p id="prognosis"></p>
+            <button type="button" class="btn btn-primary" id="specialist-sugg" data-bs-target="#appt-modal" data-bs-toggle="modal">Select Appropriate Consultant</button>     
+          </div>
+        </div>
+        <div class="modal-footer border-warning">
+          <button type="button" class="btn btn-primary" id="check-symptoms">Check Symptoms</button>     
+          <button class="btn btn-primary" data-bs-target="#appt-modal" data-bs-toggle="modal">Go Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="rescheduleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Appointment Reschedule Request</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="resch-modal-body">
+          <input placeholder="Consultant" type="textfield" maxlength="20" name="consultant-field" id="consultant-field" class="txtfield" disabled="True">
+          <input placeholder="Date" type="textfield" maxlength="20" name="pdate-field" id="pdatepicker" class="txtfield">
+          <input placeholder="Time e.g 12:00 - 14:00" type="textfield" maxlength="20" name="ptime-field" id="ptime-field" class="txtfield">
+          <input placeholder="Description" type="textfield" maxlength="20" name="pdesc-field" id="pdescription-field" class="txtfield" disabled="True">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="ok-resch">Ok</button>     
+          <button type="button" class="btn btn-primary" id="submit-resch">Submit</button>     
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-resch">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

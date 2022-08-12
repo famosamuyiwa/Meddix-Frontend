@@ -1,0 +1,211 @@
+.appt-main{
+    background-color: white;
+    height: calc(100% - 50px);
+    margin-top: 25px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.26);
+    position: relative;
+
+    .no-appt, .no-order{
+        text-align: center;
+        margin-top: 15%;
+        display: block;
+    }
+
+    .yes-appt{
+        display: none ;
+    }
+    
+    #history{
+        text-align: right;
+        padding: 0 1em 1em 0 ;
+        color: #FFCC00;
+        text-decoration: underline;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.192);
+        }
+    #pg-title{
+        padding: 1em 0 0 1em;
+        font-weight: 900;
+        color: #FFCC00;
+        font-size: 20px;        
+    }
+    tr{
+        line-height: 50px;
+    }
+  
+    #add-appt-icon{
+        margin-left: 45%;
+        filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.089));
+
+    }
+
+    #add-appt-icon2{
+        filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.089));
+    }
+
+    p{
+        margin-bottom: 0 !important;
+    }
+
+    th{
+        color: var(--span-color);
+    }
+
+    #redo{
+        background-image: url("../icons/redo.svg");
+        width:47px;
+        height:47px;
+        margin-left: 30%;
+    }
+
+    h5{
+        margin-left: 25%;
+    }
+
+    .appt-btn{
+        border: 1px solid #FFCC00 !important;
+        width: 80% !important;
+        margin-left: 10%;
+        margin-bottom: 1em;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.123);
+    }
+
+    .modal-body{
+        text-align: center;
+        background-color: whitesmoke;
+        line-height: 50px;
+        p{
+            margin-bottom: 10px !important;
+        }
+    }
+
+    #symp-chk{
+        margin-bottom: 2em;
+    }
+
+    .txtfield{
+        width: 80%;
+        border-top: none;
+        border-left: none ;
+        border-right: none ;
+        border-bottom: 2px solid #FFCC00;
+        background: transparent;
+        color: black;
+    }
+
+    input:focus{
+        outline: none;
+    }
+
+    #checked-icon{
+        background-image: url("../icons/checked.svg");
+        width: 50px;
+        height:50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: 45%;
+    }
+
+    #ok-btn, #ok-resch{
+        visibility:hidden;
+    }
+
+    #approve{
+        background-image: url("../icons/checked.svg");
+        width:47px;
+        height:47px;
+        background-position: center;
+        background-size: contain;
+        margin-left: 35%;
+    }
+
+    .marked-as-complete-btn{
+        background-color:  #cccccc;
+        color: rgb(119, 119, 119);
+        font-weight: bold;
+        cursor: not-allowed;
+    }
+    .mark-as-complete-btn{
+        background-color:  #00ff71;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #rx{
+        display:none;
+    }
+
+    #symptoms{
+        font-size: 10px !important;
+        padding: 0 !important;
+        line-height: 20px !important;
+    }
+
+    #prog-box{
+        display:none
+    }
+
+    #sugg-p{
+        display:none
+    }
+
+    #sugg{
+        color: var(--span-color);
+    }
+
+    .emr{
+        background-image: url("../icons/question.svg");
+        width:40px;
+        height:40px;
+        background-position: center;
+        background-size: contain;
+        margin-left: 35%;
+    }
+
+    #c-emr-body{
+        display: grid;
+        grid-column: 2;
+        grid-row: 2;
+        line-height: 1em !important;
+        text-align: left !important;
+
+        span{
+            color: var(--span-color);
+        }
+    }
+
+    #top-right{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+    #bottom-left{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+
+    }
+
+    #top-left{
+        grid-row-start: 1;
+        grid-row-end: 1;
+        grid-column-start: 1;
+        grid-column-end: 1;
+
+    }
+
+    #bottom-right{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+
+
+}

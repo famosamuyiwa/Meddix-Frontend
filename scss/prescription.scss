@@ -1,0 +1,21 @@
+.pr-main{
+    height: calc(100% - 50px);
+    margin-top: 25px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    position: relative;
+}
+
+.card-group{
+    float : left;
+    margin: 5px;
+}
+
+.card{
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));    
+
+}
+
+.mode-of-payment{
+    text-align: center;
+}

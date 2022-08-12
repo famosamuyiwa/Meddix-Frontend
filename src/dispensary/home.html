@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Medik</title>
+        <link rel="stylesheet" href="../../scss/appointment.scss">
+        <link rel="stylesheet" href="../../scss/dashboard.scss">
+        <link rel="stylesheet" href="../../scss/stylesheet.scss">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>     
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Mate+SC&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container">
+                <a href="#" id="logo"><span>Med</span>ik</a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" id="toggle-btn"><img src="../../icons/menu_light.svg" alt="messages"></button>
+
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <div class="container">
+                        <p>Hi, <span id="user">Etemi</span></p>
+                        <img src="../../Images/portrait.jpg" class="img-thumbnail" alt="profile picture">
+                    </div>
+                    
+                        <p class="pid">P.I.D: <span id="p-i-d">345678925</span></p>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item nav-item-hidden">
+                            <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                            <img class="nav-icon" src="../../icons/dashboard_dark.svg" alt="messages">
+                        </li>
+                        <li class="nav-item nav-item-hidden">
+                            <a class="nav-link" aria-current="page" href="#">Medical Records</a>
+                            <img class="nav-icon" src="../../icons/medrecord_dark.svg" alt="messages">
+                        </li>
+                        <li class="nav-item nav-item-hidden">
+                            <a class="nav-link" href="#">Prescriptions</a>
+                            <img class="nav-icon" src="../../icons/drugs_dark.svg" alt="messages">
+                        </li>
+                        <li class="nav-item nav-item-hidden">
+                            <a class="nav-link" href="#">Billings &amp Payments</a>
+                            <img class="nav-icon" src="../../icons/billing_dark.svg" alt="messages">
+                        </li>
+                        <li class="nav-item nav-item-hidden">
+                            <a class="nav-link" href="#">Book an Appointment</a>
+                            <img class="nav-icon" src="../../icons/calendar_dark.svg" alt="messages">
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Notifications</a>
+                            <img class="nav-icon" src="../../icons/notification.svg" alt="notification">
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Messages</a>
+                            <img class="nav-icon" src="../../icons/email.svg" alt="messages">
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Settings</a>
+                            <img class="nav-icon" src="../../icons/settings.svg" alt="settings">
+                        </li>
+                        <li class="nav-item nav-item-hidden">
+                            <a class="nav-link" href="#">Logout</a>
+                            <img class="nav-icon" src="../../icons/logout.svg" alt="messages">
+                        </li>
+                    </ul>
+
+                    <p id="footer">Final Year Project of Famosa Oluwamuyiwa 18/0623 &amp Omodon Orisetemi 18/0623<br>Medik web v1.0.0<br>Copyright © 2020-2022 Hextacy. All rights reserved.</p>
+                </div>
+            </div>
+        </nav>
+        <section class="content">
+                <div class="d-flex">
+                    <nav class="sidebar">
+                        <div class="patient_details">
+                            <img src="../../Images/portrait.jpg" alt="profile picture">
+                            <p class="category"></p>
+                            <p class="fullname"></p>
+                            <p id="pid-wrap">Dispensary-ID : <span class="did"></span></p>
+                        </div>
+                        <ul class="nav flex-column">
+                            <a class="nav-link active" href="dashboard.html" id="ddashboard-link">
+                            <li class="nav-item">
+                            <img src="../../icons/dashboard_dark.svg" id="dash-icon">
+                            Dashboard
+                            </li>
+                            </a>
+                            <a class="nav-link" id="logout-link" href="../index.html">
+                            <li class="nav-item">
+                            <img src="../../icons/logout.svg">
+                            Logout
+                            </li>
+                            </a>
+                        </ul>
+                    </nav>
+                    <div class="main">
+                        <div class="container">
+                            <div class="main-content">
+                                
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <script src="../index.js"></script>
+       
+</body>
+</html>
